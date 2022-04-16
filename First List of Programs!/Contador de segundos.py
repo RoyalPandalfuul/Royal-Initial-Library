@@ -1,4 +1,8 @@
-segundos1 = int(input("Por favor, entre com o número de segundos que deseja converter: "))
+segundos0 = int(input("Por favor, entre com o número de segundos que deseja converter: "))
+
+anos = segundos0 // 31536000
+
+segundos1 = segundos0 % 31536000
 
 dias = segundos1 // 86400
 
@@ -12,4 +16,4 @@ minutos = segundos3 // 60
 
 segundos4 = segundos3 % 60
 
-print(dias,"dias,",horas,"horas,",minutos,"minutos e",segundos4,"segundos.")
+print(f"{anos} anos. {dias} dias. {horas} horas. {minutos} minutos. {segundos4} segundos.")

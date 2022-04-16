@@ -1,23 +1,26 @@
 import math
 
-ValorDeA = float(input("Insira o valor de A: "))
+a = float(input("Digite o valor de a: "))
 
-ValorDeB = float(input("Insira o valor de B: "))
+b = float(input("Digite o valor de b: "))
 
-ValorDeC = float(input("Insira o valor de C: "))
+c = float(input("Digite o valor de c: "))
 
-delta = ValorDeB ** 2 - 4 * ValorDeA * ValorDeC
+delta = b ** 2 - 4 * a * c
 
-if delta == 0:
-    raiz1 = (-ValorDeB + math.sqrt(delta)) / (2 * ValorDeA)
-    print("A unica raiz é: ",raiz1)
+if delta < 0:
+    print("esta equação não possui raízes reais")
 else:
-        if delta < 0:
-            print("Essa equação não tem raizes reais.")
-        else:
-                raiz1 = (-ValorDeB + math.sqrt(delta)) / (2 * ValorDeA)
 
-                raiz2 = (-ValorDeB - math.sqrt(delta)) / (2 * ValorDeA)
-                
-                print("A primeira raiz é: ",raiz1)
-                print("A segunda raiz é: ",raiz2)
+    raiz1 = (-b + math.sqrt(delta)) / (2 * a)
+
+    raiz2 = (-b - math.sqrt(delta)) / (2 * a)
+
+    if delta == 0 : print("a raiz desta equação é",raiz1)
+
+    else:
+
+        if raiz1 > raiz2:
+            print("as raízes da equação são",raiz2,"e",raiz1)
+        else:
+            print("as raízes da equação são",raiz1,"e",raiz2)
